@@ -62,10 +62,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-htmltest" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-HTML-TEST" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/01/22/htmltest/" class="article-date">
-  <time datetime="2019-01-22T07:34:56.913Z" itemprop="datePublished">2019-01-22</time>
+    <a href="/2019/01/22/HTML-TEST/" class="article-date">
+  <time datetime="2019-01-22T08:54:41.866Z" itemprop="datePublished">2019-01-22</time>
 </a>
     
   </div>
@@ -76,7 +76,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/22/htmltest/">我是第san篇笔记</a>
+      <a class="article-title" href="/2019/01/22/HTML-TEST/">我是第三篇笔记</a>
     </h1>
   
 
@@ -84,59 +84,56 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div>
-    <canvas width="600px" height="500px" id="canvas" style="background: pink"></canvas>
-    <script>
-        window.onload = function () {
-            let oCanvas = document.getElementById('canvas')
-            let gd  = oCanvas.getContext('2d')
-            let startAngle = 45
-            let startAngle2 = 45
-            function a2r(angle){
-                return angle*Math.PI/180
-            }
-            function next(){
-                gd.clearRect(0,0,oCanvas.width,oCanvas.height)
-
-                //左侧物体的运动
-                startAngle--
-
-                gd.save();                      //保存：canvas的状态（图形并不保存）——颜色、translate、rotate
-                gd.translate(150,250)
-                gd.rotate(a2r(startAngle))
-
-                gd.beginPath()     //不加这个 会有特殊的动效
-                gd.rect(-100,-100,200,200)
-                gd.stroke()
-
-                gd.restore();                   //恢复：恢复到上一次保存的状态
-
-                //右侧侧物体的运动
-                startAngle2++
-
-                gd.save();                      //保存：canvas的状态（图形并不保存）——颜色、translate、rotate
-                gd.translate(450,250)
-                gd.rotate(a2r(startAngle2))
-
-                gd.beginPath()     //不加这个 会有特殊的动效
-                gd.rect(-100,-100,200,200)
-                gd.stroke()
-
-                gd.restore();                   //恢复：恢复到上一次保存的状态
-
-                requestAnimationFrame(next)
-            }
-            requestAnimationFrame(next)
-
+        <canvas width="600px" height="500px" id="canvas" style="background: pink"></canvas>
+<script>
+    window.onload = function () {
+        let oCanvas = document.getElementById('canvas')
+        let gd  = oCanvas.getContext('2d')
+        let startAngle = 45
+        let startAngle2 = 45
+        function a2r(angle){
+            return angle*Math.PI/180
         }
-    </script>
-</div>
+        function next(){
+            gd.clearRect(0,0,oCanvas.width,oCanvas.height)
 
+            //左侧物体的运动
+            startAngle--
+
+            gd.save();                      //保存：canvas的状态（图形并不保存）——颜色、translate、rotate
+            gd.translate(150,250)
+            gd.rotate(a2r(startAngle))
+
+            gd.beginPath()     //不加这个 会有特殊的动效
+            gd.rect(-100,-100,200,200)
+            gd.stroke()
+
+            gd.restore();                   //恢复：恢复到上一次保存的状态
+
+            //右侧侧物体的运动
+            startAngle2++
+
+            gd.save();                      //保存：canvas的状态（图形并不保存）——颜色、translate、rotate
+            gd.translate(450,250)
+            gd.rotate(a2r(startAngle2))
+
+            gd.beginPath()     //不加这个 会有特殊的动效
+            gd.rect(-100,-100,200,200)
+            gd.stroke()
+
+            gd.restore();                   //恢复：恢复到上一次保存的状态
+
+            requestAnimationFrame(next)
+        }
+        requestAnimationFrame(next)
+
+    }
+</script>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/22/htmltest/" data-id="cjr7g2js60000k4r5enakq79m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/22/HTML-TEST/" data-id="cjr7ix3v800000cr5wuqiadon" class="article-share-link">Share</a>
       
       
     </footer>
@@ -181,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/22/hello-world2/" data-id="cjr7fye2y0001vgr5ifmxjohg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/22/hello-world2/" data-id="cjr7gz32x0001sor5rf8he4ih" class="article-share-link">Share</a>
       
       
     </footer>
@@ -226,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/22/hello-world/" data-id="cjr7fsvpu0000vgr5xgwo6ko4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/22/hello-world/" data-id="cjr7gz32q0000sor57lfwcq5z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -267,7 +264,7 @@
       <ul>
         
           <li>
-            <a href="/2019/01/22/htmltest/">我是第san篇笔记</a>
+            <a href="/2019/01/22/HTML-TEST/">我是第三篇笔记</a>
           </li>
         
           <li>
@@ -305,7 +302,8 @@
 </nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
