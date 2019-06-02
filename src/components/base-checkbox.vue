@@ -2,12 +2,10 @@
     <div>
       <input
         type="checkbox"
-       :checked="checked"
+       :checked="isChecked"
         @change="$emit('change',$event.target.checked)"
       >
       {{isChecked}}
-      {{another}}
-      {{another2}}
     </div>
 </template>
 
@@ -15,13 +13,11 @@
 export default {
   name: 'base-checkbox',
   model: {
-    prop: 'another2',
+    prop: 'isChecked',
     event: 'change'
   },
   props: {
-    another2: Boolean,
-    isChecked: Boolean,
-    another: Boolean
+    isChecked: Boolean
   }
 
 }
