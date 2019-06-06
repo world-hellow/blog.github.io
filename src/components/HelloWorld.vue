@@ -1,43 +1,57 @@
 <template>
     <div>
-        {{isShow}}
-        <!--import components中导入的组件-->
-        <base-checkbox v-model="isShow"></base-checkbox>
-        <!-- 全局组件 -->
-        <BaseCheckbox v-model="isShow"></BaseCheckbox>
-        {{inputValue}}
-        <BaseInput></BaseInput>
-        <BaseInput v-model="inputValue"></BaseInput>
-        <!--绑定属性到子组件上指定元素-->
-        <BaseInput value="右键查看组件attrs属性" :attrs="2"></BaseInput>
-        <!--
-           attrs="2" 默认会绑定到 子组件的跟元素上  div
-           可以使用组件的  inheritAttrs: false  选项 解除跟元素的绑定
-                          v-bind="$attrs"           绑定到指定元素上
-           一个组件上的 v-model 默认会利用名为 value 的 prop 和名为 input 的事件，
-           但是像单选框、复选框等类型的输入控件可能会将 value 特性用于不同的目的。
-           model 选项可以用来避免这样的冲突
-
-           子组件上添加原生事件
-           <base-input v-on:focus.native="onFocus"></base-input>
-         -->
-
+        <h1>{{msg}}</h1>
+        <AsyncComponent3></AsyncComponent3>
+        <!--<AsyncComponent4></AsyncComponent4>-->
     </div>
 </template>
 
 <script>
-
+import LoadingComponent from './Loading'
+import ErrorComponent from './Error'
+// const AsyncComponent4 = () => ({
+//   // 需要加载的组件 (应该是一个 `Promise` 对象)
+//   component: import('./ComponentTest'),
+//   // 异步组件加载时使用的组件
+//   loading: LoadingComponent,
+//   // 加载失败时使用的组件
+//   error: ErrorComponent,
+//   // 展示加载时组件的延时时间。默认值是 200 (毫秒)
+//   delay: 200,
+//   // 如果提供了超时时间且组件加载也超时了，
+//   // 则使用加载失败时使用的组件。默认值是：`Infinity`
+//   timeout: 1000
+// })
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      isShow: true,
-      inputValue: '我是父组件中的值'
+      msg: '异步组件测试'
     }
   },
   components: {
-    'base-checkbox': resolve => require(['./common/BaseCheckbox'], resolve)
+    // 'AsyncComponent': resolve => require(['./ComponentTest'], resolve),
+    // 'AsyncComponent2': () => import('./ComponentTest'),
+    'AsyncComponent3': () => {
+      return ({
+        component: import('./ComponentTest'),
+        loading: LoadingComponent,
+        error: ErrorComponent,
+        delay: 200,
+        // 个人理解: 设置的时间内 如果加载完成就不显示加载中 不是delay时间段内也会显示loading组件
+        // delay 也不是设置的延时多少秒开始加载
+        //  较低网速下才能看到loading组件的效果
+        timeout: 2000
+        // 超过这个时间还没加载完成显示error组件
+      })
+    }
+    // 'AsyncComponent4': AsyncComponent4
+
+  },
+  methods: {
+    test () {
+      console.log(666)
+    }
   }
 }
 </script>

@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+      <router-link to="/">异步组件</router-link>
+      <router-link to="/slot">插槽</router-link>
+      <router-link to="/event">事件</router-link>
+      <router-link to="/animate">过渡效果</router-link>
+      <router-view/>
   </div>
 </template>
 
