@@ -1,0 +1,2 @@
+webpackJsonp([2],{CGRT:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n    异步组件测试\n")])},staticRenderFns:[]};var a=t("VU/8")({name:"ComponentTest"},r,!1,function(e){t("OXOH")},"data-v-51a67980",null);n.default=a.exports},OXOH:function(e,n){}});
+//# sourceMappingURL=2.e65a7a722ef9d47081aa.js.map
