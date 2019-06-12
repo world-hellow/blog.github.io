@@ -52,6 +52,16 @@ export default new Router({
       path: '/animate',
       name: 'animate',
       component: resolve => require(['@/components/Animate'], resolve)
+    },
+    {
+      path: '/groupanimate',
+      name: 'groupanimate',
+      component: resolve => require(['@/components/GroupAnimate'], resolve)
+    },
+    {
+      path: '/animatenumber',
+      name: 'animatenumber',
+      component: resolve => require(['@/components/animateNumber'], resolve)
     }
   ]
 })
