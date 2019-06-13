@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+/* 某个目录下的组件统一注册未全局组件 注意：要在new vue() 之前注册 */
 const requireComponent = require.context(
   './components/common',
   false,
@@ -27,12 +28,24 @@ requireComponent.keys().forEach((item) => { // ["./BaseCheckbox.vue", "./BaseInp
   )
 })
 
+/*
+  全局注册自定义指令
+  v-focus   进入页面的时候就获取焦点
+*/
+Vue.directive('focus', {
+  // 当被绑定的元素插入到 DOM 中时……
+  inserted: function (el) {
+    // 聚焦元素
+    el.focus()
+  }
+})
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {App},
   template: '<App/>'
 })

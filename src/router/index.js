@@ -62,6 +62,11 @@ export default new Router({
       path: '/animatenumber',
       name: 'animatenumber',
       component: resolve => require(['@/components/animateNumber'], resolve)
+    },
+    {
+      path: '/instruction',
+      name: 'instruction',
+      component: resolve => require(['@/components/自定义指令测试'], resolve)
     }
   ]
 })
