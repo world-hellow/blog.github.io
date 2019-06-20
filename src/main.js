@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+/* 自定义插件 plugin插件安装 */
+import vuePlugin from './plugin/hahaha'
+Vue.use(vuePlugin)
 
 /* 某个目录下的组件统一注册未全局组件 注意：要在new vue() 之前注册 */
 const requireComponent = require.context(

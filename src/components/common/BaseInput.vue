@@ -32,7 +32,7 @@ export default {
   computed: {
     totalListener: function () {
       let vm = this
-      return Object.assign(
+      /*return Object.assign(
         {},
         vm.$listeners,
         {
@@ -40,7 +40,13 @@ export default {
             vm.$emit('input', event.target.value)
           }
         }
-      )
+      )*/
+      return {
+        // Pass all component listeners directly to input
+        ...this.$listeners,
+        // Override input listener to work with v-model
+        input: event => this.$emit('input', event.target.value)
+      }
     }
   }
 

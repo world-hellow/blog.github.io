@@ -9,7 +9,7 @@ Vue.use(Router)
  * @param  {Object} AsyncView 需要加载的组件，如 import('@/components/home/Home.vue')
  * @return {Object} 返回一个promise对象
  */
-function lazyLoadView (AsyncView) {
+function lazyLoadView(AsyncView) {
   const AsyncHandler = () => ({
     // 需要加载的组件 (应该是一个 `Promise` 对象)
     component: AsyncView,
@@ -25,7 +25,7 @@ function lazyLoadView (AsyncView) {
   })
   return Promise.resolve({
     functional: true,
-    render (h, {data, children}) {
+    render(h, {data, children}) {
       return h(AsyncHandler, data, children)
     }
   })
@@ -67,6 +67,16 @@ export default new Router({
       path: '/instruction',
       name: 'instruction',
       component: resolve => require(['@/components/自定义指令测试'], resolve)
+    },
+    {
+      path: '/plugin',
+      name: 'plugin',
+      component: resolve => require(['@/components/自定义插件的使用'], resolve)
+    },
+    {
+      path: '/filter',
+      name: 'filter',
+      component: resolve => require(['@/components/过滤器测试'], resolve)
     }
   ]
 })

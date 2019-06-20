@@ -7,6 +7,8 @@
       <router-link to="/groupanimate">列表过渡</router-link>
       <router-link to="/animatenumber">数字动画</router-link>
       <router-link to="/instruction">自定义指令</router-link>
+      <router-link to="/plugin">插件</router-link>
+      <router-link to="/filter">过滤器</router-link>
       <router-view/>
   </div>
 </template>
